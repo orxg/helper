@@ -23,8 +23,6 @@ def clean_file(directory,suffix):
             dir_list.append(each)
         else:
             file_list.append(each)
-    print '文件夹目录%s'%dir_list
-    print '文件%s'%file_list
     
     for each in file_list:
         if os.path.splitext(each)[1] == suffix:
@@ -38,6 +36,6 @@ def clean_file(directory,suffix):
         
 
 if __name__ == '__main__':
-    directory = 'H:\TradingSystem\VectorTrader'
+    directory = 'G:\Work_ldh\Backtest\VectorTrader'
     suffix = '.pyc'
     a = clean_file(directory,suffix)

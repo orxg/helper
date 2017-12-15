@@ -1,0 +1,10 @@
+num1:
+    server:
+        172.24.181.55
+    db:
+        wind_db
+    user:
+        fsb
+    passwd:
+        fsb
+
