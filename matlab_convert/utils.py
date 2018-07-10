@@ -64,7 +64,10 @@ def time_py2matlab(date_time):
     ---------
     matlab ordinal format of time.
     '''
-    date_time_obj = dt.datetime.strptime(date_time,'%Y-%m-%d %H:%M:%S')
+    try:
+        date_time_obj = dt.datetime.strptime(date_time,'%Y-%m-%d %H:%M:%S')
+    except:
+        date_time_obj = dt.datetime.strptime(date_time,'%Y%m%d %H:%M:%S')
     int_part = date_time_obj.date().toordinal() + 366
     time_part = date_time_obj.time()
     float_part = time_part.hour * 60.0 * 60.0 + time_part.minute * 60.0 + time_part.second
